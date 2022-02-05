@@ -9,4 +9,7 @@ router.get('/', function(req, res, next) {
 router.use("/api", require("./api"));
 router.use("/blog", require("./blog"));
 
+router.use("/api/blog", require("./api/blog"));
+router.use("/api/users", require("./api/users"));
+
 module.exports = router;
