@@ -21,4 +21,20 @@ module.exports = {
 
     // 유저 삭제 성공
     USER_DELETE_SUCCESS: "유저 삭제 성공",
+
+    // 게시글 조회
+    READ_ALL_POST_SUCCESS: "모든 게시글 조회 성공",
+    READ_POST_SUCCESS: "게시글 조회 성공",
+
+    // 게시글 생성
+    CREATED_POST: "게시글 생성 성공",
+
+    // 게시글 수정
+    POST_UPDATE_SUCCESS: "게시글 수정 성공",
+
+    // 게시글 삭제
+    POST_DELETE_SUCCESS: "게시글 삭제 성공",
+
+    // 게시글 없음
+    NO_POST: "존재하지 않는 게시글입니다.",
 };
