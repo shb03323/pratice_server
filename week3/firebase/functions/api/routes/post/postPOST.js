@@ -1,9 +1,9 @@
-const responseMessage = require("../../constants/responseMessage");
-const statusCode = require("../../constants/statusCode");
+const responseMessage = require("../../../constants/responseMessage");
+const statusCode = require("../../../constants/statusCode");
 
-const util = require("../../lib/util");
-const posts = require("../../dbMockup/post");
-const users = require("../../dbMockup/user");
+const util = require("../../../lib/util");
+const posts = require("../../../dbMockup/post");
+const users = require("../../../dbMockup/user");
 
 module.exports = async(req, res) => {
     const { title, contents, writerId } = req.body;

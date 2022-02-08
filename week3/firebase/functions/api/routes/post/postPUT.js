@@ -1,8 +1,8 @@
-const responseMessage = require("../../constants/responseMessage");
-const statusCode = require("../../constants/statusCode");
+const responseMessage = require("../../../constants/responseMessage");
+const statusCode = require("../../../constants/statusCode");
 
-const util = require("../../lib/util");
-const posts = require("../../dbMockup/post");
+const util = require("../../../lib/util");
+const posts = require("../../../dbMockup/post");
 
 module.exports = async(req, res) => {
     const { id } = req.params;
@@ -12,8 +12,8 @@ module.exports = async(req, res) => {
         return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
     
-    const post = posts.filter(post => post.id === Number(id))[0];
-    if (!post) {
+    const post = posts.filter(post => post.id === Number(id));
+    if (post.length == 0) {
       return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NO_POST));
     } else {
         if (title) post[0].title = title;
