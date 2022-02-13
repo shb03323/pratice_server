@@ -9,6 +9,8 @@ const { userDB } = require('../../../db');
 module.exports = async(req, res) => {
     const { userId, title, content } = req.body;
 
+    const imageUrls = req.imageUrls;
+
     if (!userId || !title || !content) {
         return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
